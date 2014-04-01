@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+	<!--
+		Supersized - Fullscreen Slideshow jQuery Plugin
+		Version : 3.2.7
+		Site	: www.buildinternet.com/project/supersized
+		
+		Author	: Sam Dunn
+		Company : One Mighty Roar (www.onemightyroar.com)
+		License : MIT License / GPL License
+	-->
+
+	<head>
+
+		<title>Supersized - Full Screen Background Slideshow jQuery Plugin</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		
+		<link rel="stylesheet" href="css/supersized.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="theme/supersized.shutter.css" type="text/css" media="screen" />
+		
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.min.js"></script>
+		
+		<script type="text/javascript" src="js/supersized.3.2.7.js"></script>
+		<script type="text/javascript" src="theme/supersized.shutter.min.js"></script>
+		<script type="text/javascript" src="js/jquery.hoverflow.js"></script>
+		<script type="text/javascript">
+			
+			jQuery(function($){
+				
+				$.supersized({
+				
+					// Functionality
+					slide_interval          :   5000,		// Length between transitions
+					transition              :   1, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+					transition_speed		:	700,		// Speed of transition
+															   
+					// Components							
+					slide_links				:	'blank',	// Individual links for each slide (Options: false, 'num', 'name', 'blank')
+					slides 					:  	[			// Slideshow Images
+														{image : 'img/076.JPG', title : '076.jpg'},
+														{image : 'img/IMG_1584.jpg', title : 'IMG_1584.jpg'},
+														{image : 'img/IMG_1708.jpg', title : 'IMG_1708.jpg'},
+														{image : 'img/IMG_8548.jpg', title : 'IMG_8548.jpg'},
+														{image : 'img/lola_2.jpg', title : 'lola_2.jpg'},
+														{image : 'img/Solar 1.jpg', title : 'Solar 1.jpg'}
+														
+												]
+					
+				});
+		    });
+		    
+		</script>
+		<style type="text/css">
+		html, body, div, span, applet, object, iframe,  
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,  
+a, abbr, acronym, address, big, cite, code,  
+del, dfn, em, font, img, ins, kbd, q, s, samp,  
+small, strike, strong, sub, sup, tt, var,  
+b, u, i, center,  
+dl, dt, dd, ol, ul, li,  
+fieldset, form, label, legend,  
+table, caption, tbody, tfoot, thead, tr, th, td {  
+margin: 0;  
+padding: 0;  
+border: 0;  
+outline: 0;  
+font-size: 100%;  
+vertical-align: baselinebaseline;  
+background: transparent;  
+}  
+body {  
+line-height: 1;  
+}  
+ol, ul {  
+list-style: none;  
+}  
+blockquote, q {  
+quotes: none;  
+}  
+blockquote:before, blockquote:after,  
+q:before, q:after {  
+content: '';  
+content: none;  
+}  
+  
+/* remember to define focus styles! */  
+:focus {  
+outline: 0;  
+}  
+  
+/* remember to highlight inserts somehow! */  
+ins {  
+text-decoration: none;  
+}  
+del {  
+text-decoration: line-through;  
+}  
+  
+/* tables still need 'cellspacing="0"' in the markup */  
+table {  
+border-collapse: collapse;  
+border-spacing: 0;  
+}  
+- See more at: http://webdeveloperplus.com/css/25-incredibly-useful-css-tricks-you-should-know/#sthash.DjbBVE47.dpuf
+		
+		#crNavLogo {
+    margin: auto;
+    width: 117px;
+}
+#crNav li {
+    cursor: pointer;
+    display: inline;
+    
+    letter-spacing: 0.1em;
+    line-height: 28px;
+    margin: 0 10px 0 0;
+    text-transform: uppercase;
+	color: #ccc;
+}
+#crNav a{
+text-decoration: none;
+color: #fff;
+font-size: 22px;
+}
+
+</style>
+	</head>
+	
+
+
+<body>
+
+
+<!--Control Bar-->
+	<div class="load-item" id="controls-wrapper" style="display: block;">
+		<div style="" id="controls">
+			<!--Thumb Tray button-->
+				<div id="thumb_logo" style="opacity: 1;">
+					<img width="50" height="49" src="img/progress.gif">
+				</div>
+		</div>
+		
+		<div class="load-item thumb-tray-bg" id="thumb-tray" style="display: block; bottom: -146px;">
+			<div id="crNavLogo">
+				
+				<a href="/index.html"><img width="117" height="21" style="margin: 0px auto 15px; display: block; opacity: 0;" src="img/progress.gif" id="navLogo"></a>
+			</div>
+			<div id="crNav" style="opacity: 0;">
+				<ul style="top: 22px;" class="proximaBold">
+					<li><a href="firm.html" id="crNavStudio">Firm</a></li>
+					<li><a href="projects.html" id="crNavProjects">Projects</a></li>
+					<li><a href="contact.html" id="crNavContact">Contact</a></li>
+				</ul>
+			</div>
+		
+		</div>	
+	</div>
+
+
+<script type="text/javascript">
+
+	function getWindowHeight() {
+		var windowHeight = 0;
+		if (typeof(window.innerHeight) == 'number') {
+			windowHeight = window.innerHeight;
+		}
+		else {
+			if (document.documentElement && document.documentElement.clientHeight) {
+				windowHeight = document.documentElement.clientHeight;
+			}
+			else {
+				if (document.body && document.body.clientHeight) {
+					windowHeight = document.body.clientHeight;
+				}
+			}
+		}
+		return windowHeight;
+	}			
+		
+		
+	$(window).load(function(){
+		$('#hideContent').css({visibility:'visible'});
+		
+		var windowHeight = getWindowHeight();
+		
+	
+		
+
+		// Hide tray off screen
+		$('#thumb-tray').animate({bottom : -$('#thumb-tray').height()}, 0 );
+		
+		setTimeout( function()
+			  {
+				$('#thumb-tray').animate({bottom : 0, avoidTransforms : true}, 300);
+				$('#thumb_logo').animate({opacity : 0, avoidTransforms : true}, 300);
+				$('#navLogo').animate({opacity : 1, avoidTransforms : true}, 600);
+				$('#crNav').delay(600).animate({opacity : 1, avoidTransforms : true}, 600);
+			  }, 1200);
+
+		
+				
+		$('#controls-wrapper')
+			.hover(function(e) {
+				
+				$('#thumb-tray').hoverFlow(e.type, {bottom : 0, avoidTransforms : true}, 300);
+				$('#thumb_logo').hoverFlow(e.type, {opacity : 0, avoidTransforms : true}, 300);
+				$('#navLogo').hoverFlow(e.type, {opacity : 1, avoidTransforms : true}, 600);
+				$('#crNav').delay(600).hoverFlow(e.type, {opacity : 1, avoidTransforms : true}, 600);				
+			}, function(e) {
+				$('#crNav').hoverFlow(e.type, {opacity : 0, avoidTransforms : true}, 600);
+				$('#navLogo').hoverFlow(e.type, {opacity : 0, avoidTransforms : true}, 600);
+				$('#thumb_logo').delay(300).hoverFlow(e.type, {opacity : 1, filter:'', avoidTransforms : true}, 300);
+				$('#thumb-tray').hoverFlow(e.type, {bottom : -$('#thumb-tray').height(), avoidTransforms : true}, 300);
+			});
+	
+	});
+	
+	
+		    
+	</script>
+
+	
+</body>
+</html>

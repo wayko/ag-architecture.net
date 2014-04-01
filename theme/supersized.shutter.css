@@ -1,0 +1,59 @@
+/*
+
+	Supersized - Fullscreen Slideshow jQuery Plugin
+	Version : 3.2.7
+	Site	: www.buildinternet.com/project/supersized
+	
+	Theme 	: Shutter 1.2
+	Author	: Sam Dunn
+	Company : One Mighty Roar (www.onemightyroar.com)
+	License : MIT License / GPL License
+	
+*/
+
+	/* Controls Bar
+	----------------------------*/
+	#controls-wrapper { margin:0 auto; height:42px; width:100%; bottom:0px; left:0; z-index:4; position:fixed; }
+		#controls { overflow:hidden; height:100%; position:relative; text-align:center; z-index:5; }
+			#slidecounter { float:left; color:#999; font:14px "Helvetica Neue", Helvetica, Arial, sans-serif; text-shadow:#000 0 -1px 0; margin:0px 10px 0 15px; line-height:42px; }
+			#slidecaption { overflow:hidden; float:left; color:#FFF; font:400 14px "Helvetica Neue", Helvetica, Arial, sans-serif; text-shadow:#000 1px 1px 2px; margin:0 20px 0 0; line-height:42px; }
+			
+			#navigation { float:right; margin:0px 20px 0 0; }
+				
+	
+	/* Progress Bar
+	----------------------------*/					
+	#progress-back{ z-index:5; position:fixed; bottom:42px; left:0; height:8px; width:100%; background:url('../img/progress-back.png') repeat-x; }
+		#progress-bar{ position:relative; height:8px; width:100%; background:url('../img/progress-bar.png') repeat-x; }
+	
+	
+	
+	
+	/* Thumbnail Tray
+	----------------------------*/			
+
+element.style {
+    bottom: 0;
+    display: block;
+}
+#thumb-tray {
+    
+    bottom: 0;
+  
+    height: 150px;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    text-align: center;
+    width: 100%;	
+	#thumb-tray{ position:fixed; z-index:3; bottom:0; left:0;  height:150px; width:100%; 
+	overflow:hidden; text-align:center;
+	}
+	
+		
+		
+		ul#thumb-list{ display:none; list-style:none; position:relative; left:0px; padding:0 0px; }
+			ul#thumb-list li{ background:#111; list-style:none; display:inline; width:150px; height:108px; overflow:hidden; float:left; margin:0; }
+				
+				ul#thumb-list li:hover{ cursor:pointer; }
+				
